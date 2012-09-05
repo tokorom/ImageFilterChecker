@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  ImageFilterChecker
 //
-//  Created by ytokoro on 9/5/12.
-//  Copyright (c) 2012 tokorom. All rights reserved.
+//  Created by ToKoRo on 2012-09-05.
+//  Last Change: 2012-09-05.
 //
+
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
