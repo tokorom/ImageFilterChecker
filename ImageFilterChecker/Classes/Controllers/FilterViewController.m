@@ -15,7 +15,6 @@
 @property (weak) IBOutlet UITableView* tableView;
 @property (strong) NSArray* parameters;
 @property (strong) NSMutableDictionary* values;
-@property (strong) UIImage* defaultImage;
 
 @end 
 
@@ -36,17 +35,20 @@
   return self;
 }
 
+- (void)loadView
+{
+  [super loadView];
+
+  UIBarButtonItem* applyButton = [[UIBarButtonItem alloc] initWithTitle:@"Apply"
+                                                                  style:UIBarButtonItemStyleBordered
+                                                                 target:self
+                                                                 action:@selector(applyButtonDidPush)];
+  self.navigationItem.rightBarButtonItem = applyButton;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return ( UIInterfaceOrientationPortrait == interfaceOrientation );
-}
-
-- (void)viewDidDisappear:(BOOL)animated 
-{
-  [super viewDidDisappear:animated];
-  if (self.defaultImage) {
-    self.imageView.image = self.defaultImage;
-  }
 }
 
 #pragma mark - UITableViewDataSource
@@ -75,10 +77,7 @@
 
 - (void)executeFiltering
 {
-  if (nil == self.defaultImage) {
-    self.defaultImage = self.imageView.image;
-  }
-  CIImage* ciImage = [CIImage imageWithCGImage:self.defaultImage.CGImage];
+  CIImage* ciImage = [CIImage imageWithCGImage:self.targetImage.CGImage];
   CIFilter* filter = [self filterForCIImage:ciImage];
   for (id key in self.values) {
     [filter setValue:[self.values objectForKey:key] forKey:key];
@@ -87,7 +86,7 @@
   CIContext* context = [CIContext contextWithOptions:nil];
   CGImageRef imageRef = [context createCGImage:ciOutputImage fromRect:[ciOutputImage extent]];
   UIImage* outputImage = [UIImage imageWithCGImage:imageRef];
-  self.imageView.image = outputImage;
+  [self.delegate filterViewController:self updateImage:outputImage];
 }
 
 #pragma mark - ParameterCellDelegate
@@ -110,6 +109,16 @@
   CIFilter* filter = [CIFilter filterWithName:self.filterName];
   [filter setValue:ciImage forKey:kCIInputImageKey];
   return filter;
+}
+
+#pragma mark - Private Methods
+
+- (void)applyButtonDidPush
+{
+  [self.delegate filterViewController:self
+                          applyFilter:self.filterName
+                           withValues:[self.values copy]];
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

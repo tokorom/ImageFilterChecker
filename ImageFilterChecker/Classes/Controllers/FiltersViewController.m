@@ -10,9 +10,12 @@
 
 #pragma mark - Private Definition ------------------------------
 
-@interface FiltersViewController ()
+@interface FiltersViewController () <FilterViewControllerDelegate>
 @property (weak) IBOutlet UITableView* tableView;
 @property (strong) NSArray* filters;
+@property (strong) UIImage* defaultImage;
+@property (strong) UIImage* currentImage;
+@property (strong) NSMutableArray* appliedFilters;
 @end 
 
 #pragma mark - Main Implementation -----------------------------
@@ -23,8 +26,7 @@
 
 - (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
-  if ( self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil] ) {
-    // Custom initialization
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
   }
   return self;
 }
@@ -38,6 +40,11 @@
 {
   [super viewDidLoad];
 
+  self.appliedFilters = [NSMutableArray array];
+
+  self.defaultImage = self.imageView.image;
+  [self updateImage:self.defaultImage];
+
   NSString* fileName = [[NSBundle mainBundle] pathForResource:@"filters" ofType:@"plist"];
   NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:fileName];
   self.filters = [dic objectForKey:@"filters"];
@@ -47,6 +54,7 @@
 {
   [super viewWillAppear:animated];
   [self.tableView reloadData];
+  [self updateImage:self.currentImage];
 }
 
 
@@ -78,11 +86,43 @@
   NSString* className = [filter objectForKey:@"viewControllerName"];
   Class viewControllerClass = NSClassFromString(className);
   FilterViewController* viewController = [viewControllerClass new];
+  viewController.delegate = self;
   viewController.title = filterName;
   viewController.filterName = filterName;
-  viewController.imageView = self.imageView;
+  viewController.targetImage = self.imageView.image;
   [viewController setParameterWithDictionary:filter];
   [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - FilterViewControllerDelegate
+
+- (void)filterViewController:(FilterViewController*)filterViewController
+                 applyFilter:(NSString*)filterName
+                  withValues:(NSArray*)values
+{
+  [self updateImage:self.imageView.image];
+  [self.appliedFilters addObject:@{
+    @"filterName": filterName,
+    @"parameters": values
+  }];
+  NSLog( @"appliedFilters: %@", self.appliedFilters );
+}
+
+- (void)filterViewController:(FilterViewController*)filterViewController updateImage:(UIImage*)image
+{
+  self.imageView.image = image;
+}
+
+#pragma mark - Private Methods
+
+- (void)updateImage:(UIImage*)image
+{
+  if (image != self.currentImage) {
+    self.currentImage = image;
+  }
+  if (image != self.imageView.image) {
+    self.imageView.image = image;
+  }
 }
 
 @end
