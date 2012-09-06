@@ -17,14 +17,13 @@
 		0653C19715F73A8600FD9108 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19615F73A8600FD9108 /* FiltersViewController.m */; };
 		0653C19C15F73AED00FD9108 /* CIColorControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19915F73AEC00FD9108 /* CIColorControlsViewController.m */; };
 		0653C19D15F73AED00FD9108 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19B15F73AED00FD9108 /* FilterViewController.m */; };
-		0653C1A215F7444900FD9108 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653C1A115F7444900FD9108 /* FilterViewController.xib */; };
 		0653C1A615F745F300FD9108 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C1A515F745F300FD9108 /* SliderCell.m */; };
-		0653C1A815F7469C00FD9108 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653C1A715F7469C00FD9108 /* SliderCell.xib */; };
 		0653C1AA15F799E400FD9108 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0653C1A915F799E400FD9108 /* CoreImage.framework */; };
 		0653C1B215F79E5200FD9108 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C1B115F79E5200FD9108 /* AppDelegate.m */; };
-		0653C1BB15F79FB300FD9108 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653C1B815F79FB300FD9108 /* FiltersViewController.xib */; };
-		0653C1BC15F79FB300FD9108 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653C1B915F79FB300FD9108 /* ViewController_iPad.xib */; };
-		0653C1BD15F79FB300FD9108 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653C1BA15F79FB300FD9108 /* ViewController_iPhone.xib */; };
+		5BE2968315F8E53F00AD4FC8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968215F8E53F00AD4FC8 /* ViewController.xib */; };
+		5BE2968515F8E65D00AD4FC8 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */; };
+		5BE2968715F8E66B00AD4FC8 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */; };
+		5BE2968915F8E67D00AD4FC8 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968815F8E67D00AD4FC8 /* SliderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,16 +44,15 @@
 		0653C19915F73AEC00FD9108 /* CIColorControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorControlsViewController.m; sourceTree = "<group>"; };
 		0653C19A15F73AED00FD9108 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		0653C19B15F73AED00FD9108 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
-		0653C1A115F7444900FD9108 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		0653C1A415F745F300FD9108 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
 		0653C1A515F745F300FD9108 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
-		0653C1A715F7469C00FD9108 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		0653C1A915F799E400FD9108 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		0653C1B015F79E5200FD9108 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0653C1B115F79E5200FD9108 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0653C1B815F79FB300FD9108 /* FiltersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
-		0653C1B915F79FB300FD9108 /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
-		0653C1BA15F79FB300FD9108 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		5BE2968215F8E53F00AD4FC8 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
+		5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		5BE2968815F8E67D00AD4FC8 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,6 @@
 		0653C15315F7379E00FD9108 = {
 			isa = PBXGroup;
 			children = (
-				0653C1A915F799E400FD9108 /* CoreImage.framework */,
 				0653C16815F7379E00FD9108 /* ImageFilterChecker */,
 				0653C16115F7379E00FD9108 /* Frameworks */,
 				0653C15F15F7379E00FD9108 /* Products */,
@@ -93,6 +90,7 @@
 		0653C16115F7379E00FD9108 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0653C1A915F799E400FD9108 /* CoreImage.framework */,
 				0653C16215F7379E00FD9108 /* UIKit.framework */,
 				0653C16415F7379E00FD9108 /* Foundation.framework */,
 				0653C16615F7379E00FD9108 /* CoreGraphics.framework */,
@@ -167,11 +165,10 @@
 		0653C18B15F73A6800FD9108 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				0653C1B815F79FB300FD9108 /* FiltersViewController.xib */,
-				0653C1B915F79FB300FD9108 /* ViewController_iPad.xib */,
-				0653C1BA15F79FB300FD9108 /* ViewController_iPhone.xib */,
-				0653C1A115F7444900FD9108 /* FilterViewController.xib */,
-				0653C1A715F7469C00FD9108 /* SliderCell.xib */,
+				5BE2968215F8E53F00AD4FC8 /* ViewController.xib */,
+				5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */,
+				5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */,
+				5BE2968815F8E67D00AD4FC8 /* SliderCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -238,11 +235,10 @@
 			files = (
 				0653C16D15F7379E00FD9108 /* InfoPlist.strings in Resources */,
 				0653C18515F7384E00FD9108 /* sample.png in Resources */,
-				0653C1A215F7444900FD9108 /* FilterViewController.xib in Resources */,
-				0653C1A815F7469C00FD9108 /* SliderCell.xib in Resources */,
-				0653C1BB15F79FB300FD9108 /* FiltersViewController.xib in Resources */,
-				0653C1BC15F79FB300FD9108 /* ViewController_iPad.xib in Resources */,
-				0653C1BD15F79FB300FD9108 /* ViewController_iPhone.xib in Resources */,
+				5BE2968315F8E53F00AD4FC8 /* ViewController.xib in Resources */,
+				5BE2968515F8E65D00AD4FC8 /* FiltersViewController.xib in Resources */,
+				5BE2968715F8E66B00AD4FC8 /* FilterViewController.xib in Resources */,
+				5BE2968915F8E67D00AD4FC8 /* SliderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageFilterChecker/ImageFilterChecker-Prefix.pch";
 				INFOPLIST_FILE = "ImageFilterChecker/ImageFilterChecker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -343,6 +340,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageFilterChecker/ImageFilterChecker-Prefix.pch";
 				INFOPLIST_FILE = "ImageFilterChecker/ImageFilterChecker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
