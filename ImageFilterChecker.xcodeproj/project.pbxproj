@@ -19,6 +19,7 @@
 		0653C1A615F745F300FD9108 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C1A515F745F300FD9108 /* SliderCell.m */; };
 		0653C1AA15F799E400FD9108 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0653C1A915F799E400FD9108 /* CoreImage.framework */; };
 		0653C1B215F79E5200FD9108 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C1B115F79E5200FD9108 /* AppDelegate.m */; };
+		5B19972815F908130056BB1B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B19972715F908130056BB1B /* MessageUI.framework */; };
 		5BE2968315F8E53F00AD4FC8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968215F8E53F00AD4FC8 /* ViewController.xib */; };
 		5BE2968515F8E65D00AD4FC8 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */; };
 		5BE2968715F8E66B00AD4FC8 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */; };
@@ -48,6 +49,7 @@
 		0653C1A915F799E400FD9108 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		0653C1B015F79E5200FD9108 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0653C1B115F79E5200FD9108 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B19972715F908130056BB1B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5BE2968215F8E53F00AD4FC8 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B19972815F908130056BB1B /* MessageUI.framework in Frameworks */,
 				0653C1AA15F799E400FD9108 /* CoreImage.framework in Frameworks */,
 				0653C16315F7379E00FD9108 /* UIKit.framework in Frameworks */,
 				0653C16515F7379E00FD9108 /* Foundation.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		0653C15315F7379E00FD9108 = {
 			isa = PBXGroup;
 			children = (
+				5B19972715F908130056BB1B /* MessageUI.framework */,
 				0653C16815F7379E00FD9108 /* ImageFilterChecker */,
 				0653C16115F7379E00FD9108 /* Frameworks */,
 				0653C15F15F7379E00FD9108 /* Products */,

@@ -35,9 +35,9 @@
   return self;
 }
 
-- (void)loadView
+- (void)viewDidLoad
 {
-  [super loadView];
+  [super viewDidLoad];
 
   UIBarButtonItem* applyButton = [[UIBarButtonItem alloc] initWithTitle:@"Apply"
                                                                   style:UIBarButtonItemStyleBordered
