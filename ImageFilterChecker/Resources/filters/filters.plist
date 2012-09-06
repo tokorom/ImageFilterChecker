@@ -4,8 +4,8 @@
   <dict>
     <key>filters</key>
     <array>
-      <dict>
 
+      <dict>
         <key>filterName</key>
         <string>CIColorControls</string>
         <key>viewControllerName</key>
@@ -55,8 +55,46 @@
             <real>4.0</real>
           </dict>
         </array>
-
       </dict>
+
+      <dict>
+        <key>filterName</key>
+        <string>CIVignette</string>
+        <key>viewControllerName</key>
+        <string>FilterViewController</string>
+        <key>parameters</key>
+        <array>
+          <dict>
+            <key>parameterName</key>
+            <string>inputIntensity</string>
+            <key>cellClassName</key>
+            <string>SliderCell</string>
+            <key>labelName</key>
+            <string>Intensity</string>
+            <key>default</key>
+            <real>0.0</real>
+            <key>min</key>
+            <real>-1.0</real>
+            <key>max</key>
+            <real>1.0</real>
+          </dict>
+          <dict>
+            <key>parameterName</key>
+            <string>inputRadius</string>
+            <key>cellClassName</key>
+            <string>SliderCell</string>
+            <key>labelName</key>
+            <string>Radius</string>
+            <key>default</key>
+            <real>1.0</real>
+            <key>min</key>
+            <real>0.0</real>
+            <key>max</key>
+            <real>2.0</real>
+          </dict>
+        </array>
+      </dict>
+
     </array>
   </dict>
 </plist>
