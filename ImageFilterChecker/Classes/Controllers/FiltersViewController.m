@@ -2,7 +2,7 @@
 //  FiltersViewController.m
 //
 //  Created by ToKoRo on 2012-09-05.
-//  Last Change: 2012-09-05.
+//  Last Change: 2012-09-07.
 //
 
 #import "FiltersViewController.h"
@@ -11,8 +11,8 @@
 #pragma mark - Private Definition ------------------------------
 
 @interface FiltersViewController ()
-@property (weak) IBOutlet UITableView *tableView;
-@property (strong) NSMutableArray *filters;
+@property (weak) IBOutlet UITableView* tableView;
+@property (strong) NSArray* filters;
 @end 
 
 #pragma mark - Main Implementation -----------------------------
@@ -37,8 +37,10 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.filters = [NSMutableArray array];
-  [self.filters addObject:@"CIColorControls"];
+
+  NSString* fileName = [[NSBundle mainBundle] pathForResource:@"filters" ofType:@"plist"];
+  NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:fileName];
+  self.filters = [dic objectForKey:@"filters"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -62,8 +64,8 @@
   if ( nil == cell ) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kTableViewCellIdentifier];
   }
-  NSString *filterName = [self.filters objectAtIndex:indexPath.row];
-  cell.textLabel.text = filterName;
+  NSDictionary* filter = [self.filters objectAtIndex:indexPath.row];
+  cell.textLabel.text = [filter objectForKey:@"filterName"];
   return cell;
 }
 
@@ -71,13 +73,15 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-  NSString *filterName = [self.filters objectAtIndex:indexPath.row];
-  NSString *className = [NSString stringWithFormat:@"%@ViewController", filterName];
+  NSDictionary* filter = [self.filters objectAtIndex:indexPath.row];
+  NSString* filterName = [filter objectForKey:@"filterName"];
+  NSString* className = [filter objectForKey:@"viewControllerName"];
   Class viewControllerClass = NSClassFromString(className);
-  FilterViewController *viewController = [viewControllerClass new];
+  FilterViewController* viewController = [viewControllerClass new];
   viewController.title = filterName;
   viewController.filterName = filterName;
   viewController.imageView = self.imageView;
+  [viewController setParameterWithDictionary:filter];
   [self.navigationController pushViewController:viewController animated:YES];
 }
 

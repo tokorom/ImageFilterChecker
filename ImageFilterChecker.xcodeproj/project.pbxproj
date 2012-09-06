@@ -15,7 +15,6 @@
 		0653C18515F7384E00FD9108 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 0653C18415F7384E00FD9108 /* sample.png */; };
 		0653C18A15F7391400FD9108 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C18915F7391400FD9108 /* ViewController.m */; };
 		0653C19715F73A8600FD9108 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19615F73A8600FD9108 /* FiltersViewController.m */; };
-		0653C19C15F73AED00FD9108 /* CIColorControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19915F73AEC00FD9108 /* CIColorControlsViewController.m */; };
 		0653C19D15F73AED00FD9108 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C19B15F73AED00FD9108 /* FilterViewController.m */; };
 		0653C1A615F745F300FD9108 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653C1A515F745F300FD9108 /* SliderCell.m */; };
 		0653C1AA15F799E400FD9108 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0653C1A915F799E400FD9108 /* CoreImage.framework */; };
@@ -24,6 +23,8 @@
 		5BE2968515F8E65D00AD4FC8 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */; };
 		5BE2968715F8E66B00AD4FC8 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */; };
 		5BE2968915F8E67D00AD4FC8 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968815F8E67D00AD4FC8 /* SliderCell.xib */; };
+		5BE2968C15F8EAC300AD4FC8 /* ParameterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2968B15F8EAC300AD4FC8 /* ParameterCell.m */; };
+		5BE2968F15F8EE3B00AD4FC8 /* filters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2968E15F8EE3B00AD4FC8 /* filters.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,6 @@
 		0653C18915F7391400FD9108 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0653C19515F73A8600FD9108 /* FiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersViewController.h; sourceTree = "<group>"; };
 		0653C19615F73A8600FD9108 /* FiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersViewController.m; sourceTree = "<group>"; };
-		0653C19815F73AEC00FD9108 /* CIColorControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIColorControlsViewController.h; sourceTree = "<group>"; };
-		0653C19915F73AEC00FD9108 /* CIColorControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorControlsViewController.m; sourceTree = "<group>"; };
 		0653C19A15F73AED00FD9108 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		0653C19B15F73AED00FD9108 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		0653C1A415F745F300FD9108 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
@@ -53,6 +52,9 @@
 		5BE2968415F8E65D00AD4FC8 /* FiltersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		5BE2968615F8E66B00AD4FC8 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		5BE2968815F8E67D00AD4FC8 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		5BE2968A15F8EAC300AD4FC8 /* ParameterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterCell.h; sourceTree = "<group>"; };
+		5BE2968B15F8EAC300AD4FC8 /* ParameterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterCell.m; sourceTree = "<group>"; };
+		5BE2968E15F8EE3B00AD4FC8 /* filters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = filters.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		0653C18215F7384E00FD9108 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5BE2968D15F8EE0F00AD4FC8 /* filters */,
 				0653C18B15F73A6800FD9108 /* xib */,
 				0653C18315F7384E00FD9108 /* assets */,
 			);
@@ -150,8 +153,6 @@
 		0653C18715F7391400FD9108 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0653C19815F73AEC00FD9108 /* CIColorControlsViewController.h */,
-				0653C19915F73AEC00FD9108 /* CIColorControlsViewController.m */,
 				0653C19A15F73AED00FD9108 /* FilterViewController.h */,
 				0653C19B15F73AED00FD9108 /* FilterViewController.m */,
 				0653C19515F73A8600FD9108 /* FiltersViewController.h */,
@@ -176,10 +177,20 @@
 		0653C1A315F745F300FD9108 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5BE2968A15F8EAC300AD4FC8 /* ParameterCell.h */,
+				5BE2968B15F8EAC300AD4FC8 /* ParameterCell.m */,
 				0653C1A415F745F300FD9108 /* SliderCell.h */,
 				0653C1A515F745F300FD9108 /* SliderCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE2968D15F8EE0F00AD4FC8 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2968E15F8EE3B00AD4FC8 /* filters.plist */,
+			);
+			path = filters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				5BE2968515F8E65D00AD4FC8 /* FiltersViewController.xib in Resources */,
 				5BE2968715F8E66B00AD4FC8 /* FilterViewController.xib in Resources */,
 				5BE2968915F8E67D00AD4FC8 /* SliderCell.xib in Resources */,
+				5BE2968F15F8EE3B00AD4FC8 /* filters.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +264,10 @@
 				0653C16F15F7379E00FD9108 /* main.m in Sources */,
 				0653C18A15F7391400FD9108 /* ViewController.m in Sources */,
 				0653C19715F73A8600FD9108 /* FiltersViewController.m in Sources */,
-				0653C19C15F73AED00FD9108 /* CIColorControlsViewController.m in Sources */,
 				0653C19D15F73AED00FD9108 /* FilterViewController.m in Sources */,
 				0653C1A615F745F300FD9108 /* SliderCell.m in Sources */,
 				0653C1B215F79E5200FD9108 /* AppDelegate.m in Sources */,
+				5BE2968C15F8EAC300AD4FC8 /* ParameterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>filters</key>
+    <array>
+      <dict>
+
+        <key>filterName</key>
+        <string>CIColorControls</string>
+        <key>viewControllerName</key>
+        <string>FilterViewController</string>
+        <key>parameters</key>
+        <array>
+          <dict>
+            <key>parameterName</key>
+            <string>inputSaturation</string>
+            <key>cellClassName</key>
+            <string>SliderCell</string>
+            <key>labelName</key>
+            <string>Saturation</string>
+            <key>default</key>
+            <real>1.0</real>
+            <key>min</key>
+            <real>0.0</real>
+            <key>max</key>
+            <real>2.0</real>
+          </dict>
+          <dict>
+            <key>parameterName</key>
+            <string>inputBrightness</string>
+            <key>cellClassName</key>
+            <string>SliderCell</string>
+            <key>labelName</key>
+            <string>Brightness</string>
+            <key>default</key>
+            <real>0.0</real>
+            <key>min</key>
+            <real>-1.0</real>
+            <key>max</key>
+            <real>1.0</real>
+          </dict>
+          <dict>
+            <key>parameterName</key>
+            <string>inputContrast</string>
+            <key>cellClassName</key>
+            <string>SliderCell</string>
+            <key>labelName</key>
+            <string>Contrast</string>
+            <key>default</key>
+            <real>1.0</real>
+            <key>min</key>
+            <real>0.0</real>
+            <key>max</key>
+            <real>4.0</real>
+          </dict>
+        </array>
+
+      </dict>
+    </array>
+  </dict>
+</plist>
