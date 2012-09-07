@@ -14,6 +14,7 @@
 @property (copy) NSString* filterName;
 
 - (void)setParameterWithDictionary:(NSDictionary*)dic;
+- (void)setMergeInfoWithDictionary:(NSDictionary*)dic;
 
 @end
 

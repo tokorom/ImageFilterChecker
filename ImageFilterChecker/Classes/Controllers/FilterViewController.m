@@ -14,6 +14,7 @@
 
 @property (weak) IBOutlet UITableView* tableView;
 @property (strong) NSArray* parameters;
+@property (strong) NSArray* mergeInfos;
 @property (strong) NSMutableDictionary* values;
 
 @end 
@@ -28,9 +29,6 @@
 {
   if (self = [super initWithNibName:@"FilterViewController" bundle:nibBundleOrNil]) {
     self.values = [NSMutableDictionary dictionary];
-    for (NSDictionary* dic in self.parameters) {
-      [self.values setObject:[dic objectForKey:@"default"] forKey:[dic objectForKey:@"parameterName"]];
-    }
   }
   return self;
 }
@@ -79,8 +77,9 @@
 {
   CIImage* ciImage = [CIImage imageWithCGImage:self.targetImage.CGImage];
   CIFilter* filter = [self filterForCIImage:ciImage];
-  for (id key in self.values) {
-    [filter setValue:[self.values objectForKey:key] forKey:key];
+  NSDictionary *parameters = [self parametersFromValues:self.values];
+  for (id key in parameters) {
+    [filter setValue:[parameters objectForKey:key] forKey:key];
   }
   CIImage* ciOutputImage = filter.outputImage;
   CIContext* context = [CIContext contextWithOptions:nil];
@@ -102,6 +101,14 @@
 - (void)setParameterWithDictionary:(NSDictionary*)dic
 {
   self.parameters = [dic objectForKey:@"parameters"];
+  for (NSDictionary* dic in self.parameters) {
+    [self.values setObject:[dic objectForKey:@"default"] forKey:[dic objectForKey:@"parameterName"]];
+  }
+}
+
+- (void)setMergeInfoWithDictionary:(NSDictionary*)dic
+{
+  self.mergeInfos = [dic objectForKey:@"merges"];
 }
 
 - (CIFilter*)filterForCIImage:(CIImage*)ciImage
@@ -109,6 +116,23 @@
   CIFilter* filter = [CIFilter filterWithName:self.filterName];
   [filter setValue:ciImage forKey:kCIInputImageKey];
   return filter;
+}
+
+- (NSDictionary*)parametersFromValues:(NSDictionary*)values
+{
+  if (self.mergeInfos) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    for (NSDictionary* mergeInfo in self.mergeInfos) {
+      NSString* outputClassName = [mergeInfo objectForKey:@"outputClassName"];
+      NSString* outputName = [mergeInfo objectForKey:@"outputName"];
+      if ([@"CIVector" isEqualToString:outputClassName]) {
+        [parameters setObject:[self CIVectorWithMergeInfo:mergeInfo withValues:values] forKey:outputName];
+      }
+    }
+    return parameters;
+  } else {
+    return values;
+  }
 }
 
 #pragma mark - Private Methods
@@ -119,6 +143,13 @@
                           applyFilter:self.filterName
                            withValues:[self.values copy]];
   [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (CIVector*)CIVectorWithMergeInfo:(NSDictionary*)mergeInfo withValues:(NSDictionary*)values
+{
+  NSNumber* x = [values objectForKey:[mergeInfo objectForKey:@"input1"]];
+  NSNumber* y = [values objectForKey:[mergeInfo objectForKey:@"input2"]];
+  return [CIVector vectorWithX:[x floatValue] Y:[y floatValue]];
 }
 
 @end

@@ -107,6 +107,7 @@ typedef enum {
   viewController.filterName = filterName;
   viewController.targetImage = self.imageView.image;
   [viewController setParameterWithDictionary:filter];
+  [viewController setMergeInfoWithDictionary:filter];
   [self.navigationController pushViewController:viewController animated:YES];
 }
 
